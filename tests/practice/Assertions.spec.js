@@ -15,4 +15,8 @@ test ('AssertionsTest', async ({page})=>{
 
     const searchBox = await page.locator("#small-searchterms");
     await expect(searchBox).toBeEnabled();
+
+    const maleRadioButton = await page.locator('#gender-male')
+    await maleRadioButton.click();
+    await expect(maleRadioButton).toBeChecked();
 })
